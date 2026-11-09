@@ -1,0 +1,130 @@
+{
+  "isDraft": true,
+  "map": "Hot Potato",
+  "mapScore": 1,
+  "phase": "banning",
+  "first": "enemy",
+  "bans": [
+    {
+      "name": null,
+      "error": 120,
+      "score": 0,
+      "margin": 0,
+      "alternatives": [],
+      "texture": 7.457895714290098,
+      "badge": 0
+    },
+    {
+      "name": null,
+      "error": 120,
+      "score": 0,
+      "margin": 0,
+      "alternatives": [],
+      "texture": 9.572457836515332,
+      "badge": 0
+    },
+    {
+      "name": null,
+      "error": 120,
+      "score": 0,
+      "margin": 0,
+      "alternatives": [],
+      "texture": 10.041526658485171,
+      "badge": 0
+    },
+    {
+      "name": null,
+      "error": 120,
+      "score": 0,
+      "margin": 0,
+      "alternatives": [],
+      "texture": 42.8000943615244,
+      "badge": 0
+    },
+    {
+      "name": null,
+      "error": 120,
+      "score": 0,
+      "margin": 0,
+      "alternatives": [],
+      "texture": 42.854857582032515,
+      "badge": 0
+    },
+    {
+      "name": null,
+      "error": 120,
+      "score": 0,
+      "margin": 0,
+      "alternatives": [],
+      "texture": 42.66752765034573,
+      "badge": 0
+    }
+  ],
+  "mine": [
+    {
+      "locked": false,
+      "box": [
+        -0.0040000000000000036,
+        0.115,
+        0.115,
+        0.19
+      ]
+    },
+    {
+      "locked": false,
+      "box": [
+        -0.0040000000000000036,
+        0.307,
+        0.115,
+        0.19
+      ]
+    },
+    {
+      "locked": false,
+      "box": [
+        -0.0040000000000000036,
+        0.499,
+        0.115,
+        0.19
+      ]
+    }
+  ],
+  "enemy": [
+    {
+      "locked": false,
+      "box": [
+        0.023999999999999997,
+        0.754,
+        0.071,
+        0.158
+      ]
+    },
+    {
+      "locked": false,
+      "box": [
+        0.112,
+        0.754,
+        0.071,
+        0.158
+      ]
+    },
+    {
+      "locked": false,
+      "box": [
+        0.19999999999999998,
+        0.754,
+        0.071,
+        0.158
+      ]
+    }
+  ],
+  "layout": {
+    "intercept": 0.319,
+    "slope": 0.035,
+    "score": 1.0771428571428572,
+    "confidence": 1,
+    "offsetX": -0.0040000000000000036
+  },
+  "width": 1170,
+  "height": 540
+}
