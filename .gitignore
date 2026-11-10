@@ -18,3 +18,9 @@ outputs/
 *.bin
 Thumbs.db
 .DS_Store
+build/
+dist/
+*.exe
+*.dll
+*.zip
+*.pdb

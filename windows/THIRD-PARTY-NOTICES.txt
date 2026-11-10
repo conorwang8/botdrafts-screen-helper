@@ -1,0 +1,21 @@
+BotDrafts Helper includes the following third-party components and materials.
+
+Node.js: the runtime's full license and third-party notices are included in
+runtime/NODE-LICENSE.txt. Source: https://github.com/nodejs/node
+
+sharp / libvips and Tesseract.js: package licenses and notices are included in
+app/node_modules alongside the distributed packages.
+
+English OCR traineddata: https://github.com/tesseract-ocr/tessdata
+The OCR software's Apache-2.0 license is included with Tesseract.js.
+
+The local web page and recommendation model are downloaded from BotDrafts:
+https://botdrafts.pages.dev/
+The original page's attribution remains intact. This helper adds local screen
+reading and browser integration. It is not endorsed by the BotDrafts author.
+
+Brawler portraits and emoji are from the Brawlify CDN:
+https://github.com/Brawlify/CDN
+Brawler metadata is from https://brawlapi.com/
+
+This is an unofficial fan tool and is not endorsed by Supercell.

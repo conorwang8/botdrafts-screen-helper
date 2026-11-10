@@ -1,14 +1,20 @@
 {
   "name": "botdrafts-screen-helper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Local Windows screen reader that fills ranked Brawl Stars drafts in BotDrafts.",
   "private": true,
   "type": "module",
-  "engines": {"node": ">=24"},
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "setup": "node setup.mjs",
     "start": "node server.mjs --open",
-    "test": "node --test"
+    "test": "node --test",
+    "build:windows": "powershell.exe -NoProfile -File scripts/build-windows.ps1"
   },
-  "dependencies": {"sharp": "0.35.5", "tesseract.js": "7.0.0"}
+  "dependencies": {
+    "sharp": "0.35.5",
+    "tesseract.js": "7.0.0"
+  }
 }

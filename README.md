@@ -4,7 +4,15 @@ A local Windows helper that reads a mirrored Brawl Stars ranked draft and fills 
 
 The helper reads the phone screen through ADB, using the same connection as scrcpy. It does not tap the phone or choose brawlers in the game.
 
-## Requirements
+## Windows executable
+
+Download **BotDrafts-Helper.exe** from the repository's Releases page and double-click it. The executable includes Node.js, the reader, and its reference data. Node.js and npm do not need to be installed separately.
+
+On first launch it unpacks its files into `%LOCALAPPDATA%\BotDraftsHelper\versions`. It opens the local BotDrafts page in your browser and keeps a small tray icon for reopening or quitting the helper. If the helper is already running, another launch opens the existing reader.
+
+Keep scrcpy installed and your phone connected as usual. The executable is for 64-bit Windows 10/11.
+
+## Requirements for running from source
 
 - Windows with Node.js 24 or newer and npm.
 - scrcpy and its included ADB, with an authorized Android phone connected.
@@ -50,6 +58,8 @@ The browser-facing service listens on loopback only. This project requires a loc
 ```sh
 npm test
 ```
+
+To build the self-contained Windows executable after setup, run `npm run build:windows` on Windows. The build uses the Windows .NET Framework C# compiler, embeds the installed Node.js runtime and app dependencies, and writes `dist/BotDrafts-Helper.exe`. Build output is excluded from Git. A release build can be verified with `BotDrafts-Helper.exe --self-test report.json`; this uses an isolated local test port and then stops its test server.
 
 Tests cover draft confirmation, fast updates, hidden bans, pre-picks, manual corrections, and resetting for a new draft. Screenshot-recognition checks were also performed locally against captured drafts; personal screen captures are not included in this repository.
 

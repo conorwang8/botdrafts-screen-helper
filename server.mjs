@@ -9,6 +9,7 @@ import {DraftTracker} from './tracker.mjs';
 import {buildPage} from './site-bridge.mjs';
 
 const root=path.dirname(fileURLToPath(import.meta.url));
+const appVersion=JSON.parse(await fs.readFile(path.join(root,'package.json'),'utf8')).version;
 const PORT=Number(process.env.BOTDRAFTS_PORT||8766),host='127.0.0.1',base=`http://${host}:${PORT}`;
 const execute=promisify(execFile),tracker=new DraftTracker({fast:true}),listeners=new Set(),captureFormats=new Map();
 const replayPath=process.env.BOTDRAFTS_REPLAY||null;
@@ -90,7 +91,7 @@ const server=http.createServer(async(req,res)=>{
  try{
   if(!allowed(req)){json(res,403,{error:'This helper is only available locally.'});return;}
   const url=new URL(req.url,base),route=url.pathname;
-  if(route==='/helper/health'){json(res,200,{name:'BotDrafts Screen Helper',version:'1.0.2',ready:runtime.ready});return;}
+  if(route==='/helper/health'){json(res,200,{name:'BotDrafts Screen Helper',version:appVersion,ready:runtime.ready});return;}
   if(route==='/api/ping'){json(res,200,{public:true});return;}
   if(route==='/api/player'&&req.method==='GET'){
    const tag=url.searchParams.get('tag')||'';
